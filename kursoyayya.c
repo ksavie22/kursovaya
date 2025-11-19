@@ -59,15 +59,23 @@ int main() {
     printf("f(x) = E x^(2n+1)/(2n+1), x >= 1\n\n");
 
     do {
-        printf("\n== МЕНЮ ==\n");
+        printf("\n=== МЕНЮ ===\n");
         printf("1. Значение функции в точке\n");
+        printf("2. Таблица значений на интервале\n");
+        printf("3. Поиск минимума/максимума на отрезке\n");
+        printf("4. Поиск x: f(x) ≈ Y\n");
+        printf("5. Производная в точке\n");
         printf("0. Выход\n");
-        
+        printf("Выберите операцию: ");
 
         scanf("%d", &choice);
 
         switch (choice) {
         case 1: calculate_value(); break;
+        case 2: create_table(); break;
+        case 3: find_extremum(); break;
+        case 4: find_x_by_y(); break;
+        case 5: calculate_derivative(); break;
         case 0: printf("Выход из программы\n"); break;
         default: printf("Неверный выбор. Попробуйте снова.\n");
         }
